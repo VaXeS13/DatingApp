@@ -12,7 +12,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
   model: any = {}
-  user: any
+  
   constructor(
     public accountService: AccountService, 
     private router: Router, 
@@ -24,9 +24,7 @@ export class NavComponent implements OnInit {
   login() {
     this.accountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/members')
-      this.user = this.model.username
     }), error => {
-      this.toastr.error(error.error)
     }
   }
 
