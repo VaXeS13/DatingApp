@@ -1,6 +1,5 @@
 export interface User {
     userName: string;
     token: string;
+    photoUrl: string;
 }
-
-let data:number | string = 42;
